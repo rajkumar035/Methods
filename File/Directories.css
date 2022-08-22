@@ -1,0 +1,59 @@
+body {
+  padding: 0rem;
+  margin: 0rem;
+  font-family: sans-serif;
+}
+article {
+  display: flex;
+}
+nav {
+  background: #fff;
+  width: 15%;
+  z-index: 1;
+  overflow-x: hidden;
+  padding: 1rem 1rem 0rem 1rem;
+  height: 100%;
+  position: fixed;
+  border: 1px solid black;
+}
+section {
+  background: blue;
+  width: 85%;
+  height: 100vh;
+  margin: 0% 0% 0% 16%;
+  justify-content: center;
+}
+details {
+  padding: 0.4rem 0rem;
+}
+summary {
+  font-size: 1.2rem;
+  padding: 0.6rem 0rem;
+}
+.sub-nav {
+  padding: 0.3rem 1rem;
+  display: flex;
+  align-items: center;
+}
+.sub-nav:focus {
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  width: 100%;
+  border-radius: 20px 0px 0px 20px;
+}
+a {
+  font-size: 1rem;
+  padding: 0.8rem 0rem 0rem 2.8rem;
+  color: black;
+  display: block;
+  text-decoration: none;
+}
+.data-cont {
+  padding: 5rem;
+  color: white;
+  font-size: 6rem;
+}
+.data-cont a {
+  font-size: 2rem;
+  color: white;
+}

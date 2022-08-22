@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./Directories.css" />
+    <title>File Management</title>
+  </head>
+
+  <body>
+    <article>
+      <nav>
+        <details id="main-hold">
+          <summary>Patients Record</summary>
+          <details id="doc">
+            <summary class="sub-nav" id="sub-doc">Doctor</summary>
+          </details>
+          <details id="occ-thera">
+            <summary class="sub-nav" id="sub-occ">
+              Occupational Therapist
+            </summary>
+          </details>
+        </details>
+      </nav>
+
+      <section>
+        <p id="data-cont" class="data-cont"></p>
+      </section>
+    </article>
+  </body>
+
+  <script>
+    const docs = [
+      { name: 'Rajkumar', Data: 'First Patient of Doctor' },
+      { name: 'Nishanth', Data: 'Second Patient of Doctor' },
+    ];
+    const occ = [
+      {
+        name: 'Occ - Rajkumar',
+        Data: 'First patient of Ocupational therapist',
+      },
+      {
+        name: 'Occ - Nishanth',
+        Data: 'Second patient of Ocupational therapist',
+      },
+      {
+        name: 'Occ - Prem',
+        Data: 'Third patient of Ocupational therapist',
+      },
+    ];
+
+    const doc = document.getElementById('doc');
+    const occu = document.getElementById('occ-thera');
+    var content = document.getElementById('data-cont');
+    var mainDoc = document.getElementById('sub-doc');
+    var mainOcc = document.getElementById('sub-occ');
+
+    docs.forEach((k) => {
+      //MainBody
+      mainDoc.addEventListener('click', () => {
+        var docLink = document.createElement('a');
+        docLink.innerText = k.name;
+        console.log(k.Data);
+        content.appendChild(docLink);
+        docLink.addEventListener('click', () => {
+          content.innerText = k.Data;
+        });
+      });
+      //Folder Structure
+      var docFold = document.createElement('a');
+      docFold.innerText = k.name;
+      doc.appendChild(docFold);
+      docFold.addEventListener('click', () => {
+        content.innerText = k.Data;
+      });
+    });
+
+    occ.forEach((l) => {
+      //MainBody
+      mainOcc.addEventListener('click', () => {
+        var occLink = document.createElement('a');
+        occLink.innerText = l.name;
+        console.log(l.name);
+        content.appendChild(occLink);
+        occLink.addEventListener('click', () => {
+          content.innerText = l.Data;
+        });
+      });
+      //Folder Structure
+      var occFold = document.createElement('a');
+      occFold.innerText = l.name;
+      occu.appendChild(occFold);
+      occFold.addEventListener('click', () => {
+        content.innerText = l.Data;
+      });
+    });
+  </script>
+</html>

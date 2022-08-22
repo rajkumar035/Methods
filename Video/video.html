@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      height: 600px;
+      width: 1000px;
+    }
+    video::-webkit-media-controls-fullscreen-button,
+    video::-webkit-media-controls-play-button,
+    video::-webkit-media-controls-mute-button {
+      display: none;
+    }
+    button {
+      font-size: 1rem;
+      letter-spacing: 0.06em;
+      color: #ffffff;
+      border: none;
+      font-weight: 600;
+      background: rgb(12, 101, 131);
+      padding: 1rem;
+      border-radius: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+      cursor: pointer;
+      margin: 1rem;
+    }
+    #rec-btn {
+      float: right;
+    }
+    video {
+      margin: 1rem;
+      height: 100%;
+      width: 100%;
+    }
+  </style>
+  <body>
+    <button id="btn">Start Recording</button>
+    <button id="rec-btn">Show Record</button>
+    <br />
+    <video id="vid" autoplay controls height="auto" width="auto" muted></video>
+  </body>
+  <script src="./video.js"></script>
+</html>
